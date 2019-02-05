@@ -30,13 +30,13 @@ Product.propTypes = {
 }
 
 function weightAllowed(props, propName, componentName) {
-  let weight = props[propName];
-  if (weight === undefined) {
-    return new Error(propName + ' in ' + componentName + " is required and must be defined.")
-  } else if (isNaN(weight)) {
-    return new Error(propName + ' in ' + componentName + " is not a number.")
-  } else if (weight < 80 || weight > 300) {
-    return new Error(propName + ' in ' + componentName + " is not within 80 and 300.");
+  const value = props[propName];
+  if (value >= 80 && value <= 300) {
+    return null;
+  } else {
+    return new Error(
+      'Invalid prop `' + propName + '` supplied to' +
+        ' `' + componentName + '`. Validation failed.'
+    );
   }
-  return null; // assuming all is ok
-};
+}
