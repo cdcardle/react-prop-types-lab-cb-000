@@ -30,7 +30,7 @@ Product.propTypes = {
 }
 
 function weightAllowed(props, propName, componentName) {
-  let value = props[propName];
+  // let value = props[propName];
   debugger
   if (!/matchme/.test(props[propName])) {
     return new Error(
