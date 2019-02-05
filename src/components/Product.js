@@ -26,7 +26,7 @@ Product.propTypes = {
   producer: PropTypes.string,
   hasWatermark: PropTypes.bool,
   color: PropTypes.oneOf(['white', 'eggshell-white', 'salmon']).isRequired,
-  weight: weightAllowed.isRequired
+  weight: weightAllowed
 }
 
 function weightAllowed(props, propName, componentName) {
