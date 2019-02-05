@@ -22,3 +22,12 @@ Product.propTypes = {
   color: PropTypes.string.isRequired,
   weight: PropTypes.number
 }
+
+function weightAllowed(props, propName, componentName) {
+  if (props[propName]) {
+    return new Error(
+      'Invalid prop `' + propName + '` supplied to' +
+      ' `' + componentName + '`. Validation failed.'
+    );
+  }
+}
