@@ -35,7 +35,7 @@ function weightAllowed(props, propName, componentName) {
     return null;
   } else {
     return new Error(
-      'Invalid prop `' + propFullName + '` supplied to' +
+      'Invalid prop `' + propName + '` supplied to' +
         ' `' + componentName + '`. Validation failed.'
     );
   }
