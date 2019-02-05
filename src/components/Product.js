@@ -38,5 +38,4 @@ function weightAllowed(props, propName, componentName) {
   } else if (value < 80 || value > 300) {
     return new Error(propName + 'should be between 80 and 300.  Validation failed.')
   }
-  return null;
 }
