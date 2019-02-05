@@ -31,7 +31,9 @@ Product.propTypes = {
 
 function weightAllowed(props, propName, componentName) {
   const value = props[propName];
-  if (isNaN(value)) {
+  if (value === undefined) {
+    return new Error(propName + 'cannot be undefined.  Validation failed.')
+  } else if (isNaN(value)) {
     return new Error(propName + 'is not a number.  Validation failed.');
   } else if (value < 80 && value > 300) {
     return new Error(propName + 'should be between 80 and 300.  Validation failed.')
