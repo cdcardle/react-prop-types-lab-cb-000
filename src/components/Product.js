@@ -31,7 +31,7 @@ Product.propTypes = {
 
 function weightAllowed(props, propName, componentName) {
   let value = props[propName];
-  if (value ) {
+  if (!(value >= 80 && value <= 300)) {
     return new Error(
       'Validation Failed.  `' + propName + '` needs to be a number between 80 and 300.'
     );
