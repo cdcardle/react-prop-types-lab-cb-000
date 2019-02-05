@@ -30,12 +30,10 @@ Product.propTypes = {
 }
 
 function weightAllowed(props, propName, componentName) {
-  // let value = props[propName];
-  debugger
-  if (!/matchme/.test(props[propName])) {
+  let value = props[propName];
+  if (value ) {
     return new Error(
-      'Invalid prop `' + propName + '` supplied to' +
-      ' `' + componentName + '`. Validation failed.'
+      'Validation Failed.  `' + propName + '` needs to be a number between 80 and 300.'
     );
   }
 }
