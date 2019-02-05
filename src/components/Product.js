@@ -30,7 +30,7 @@ Product.propTypes = {
 }
 
 function weightAllowed(props, propName, componentName) {
-  let value = props[propName];
+  const value = props[propName];
   if (value >= 80 && value <= 300) {
     return null;
   } else {
