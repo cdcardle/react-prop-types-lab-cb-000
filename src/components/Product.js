@@ -31,7 +31,7 @@ Product.propTypes = {
 
 function weightAllowed(props, propName, componentName) {
   const value = props[propName];
-  if (!(value >= 80 && value <= 300)) {
+  if (isNaN(value)) {
     return new Error(
       'Invalid prop `' + propName + '` supplied to' +
         ' `' + componentName + '`. Validation failed.'
