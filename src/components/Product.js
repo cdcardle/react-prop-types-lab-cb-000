@@ -30,6 +30,7 @@ Product.propTypes = {
 }
 
 function weightAllowed(props, propName, componentName) {
+  let value = prop[propName];
   if (!/matchme/.test(props[propName])) {
     return new Error(
       'Invalid prop `' + propName + '` supplied to' +
