@@ -20,7 +20,7 @@ Product.propTypes = {
   producer: PropTypes.string,
   hasWatermark: PropTypes.bool,
   color: PropTypes.string.isRequired,
-  weight: PropTypes.number
+  weight: weightAllowed
 }
 
 function weightAllowed(props, propName, componentName) {
