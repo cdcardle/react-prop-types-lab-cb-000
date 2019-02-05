@@ -35,7 +35,8 @@ function weightAllowed(props, propName, componentName) {
     return null;
   } else {
     return new Error(
-      'Validation Failed.  `' + propName + '` needs to be a number between 80 and 300.'
+      'Invalid prop `' + propFullName + '` supplied to' +
+        ' `' + componentName + '`. Validation failed.'
     );
   }
 }
