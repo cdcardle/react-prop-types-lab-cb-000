@@ -30,11 +30,9 @@ Product.propTypes = {
 }
 
 function weightAllowed(props, propName, componentName) {
-  const value = props[propName];
+  let value = props[propName];
   if (isNaN(value)) {
-    return new Error(
-      'Invalid prop `' + propName + '` supplied to' +
-        ' `' + componentName + '`. Validation failed.'
-    );
+    return new Error(propName + '` supplied to' +
+        ' `' + componentName + '`. Validation failed.');
   }
 }
