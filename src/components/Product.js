@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 class Product extends React.Component {
   render() {
     return (
-
+      <div>
+        <p>Name: {this.props.name}</p>
+      </div>
     )
   }
 }
